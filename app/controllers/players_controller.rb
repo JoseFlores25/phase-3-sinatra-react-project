@@ -1,18 +1,16 @@
 class PlayersController < ApplicationController
-
   get '/players' do
-    sortedPlayers = Players.playerList
-    sortedPlayers.to_json
+      sortedPlayers = Player.playerList
+      sortedPlayers.to_json
   end
 
   post '/players' do
-    player = Player.create(params)
-    player.to_json
+      player = Player.create(params)
+      player.to_json
   end
 
   delete '/players/:id' do
-    player = Player.find_by(id: params[:id])
-    player.destroy
+      player = Player.find_by(id: params[:id])
+      player.destroy
   end
-
 end

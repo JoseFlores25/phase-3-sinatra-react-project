@@ -1,3 +1,5 @@
+
+
 require_relative "./config/environment"
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
@@ -12,4 +14,6 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use PlayersController
+use TeamsController
 run ApplicationController

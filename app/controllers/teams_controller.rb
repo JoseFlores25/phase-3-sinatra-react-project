@@ -1,5 +1,3 @@
-
-
 class TeamsController < ApplicationController
   get '/teams' do
       teams = Team.all
